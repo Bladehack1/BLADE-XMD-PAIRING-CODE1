@@ -11,13 +11,26 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: black; /* Set the background color to black */
+      background-image: url('https://files.catbox.moe/o5dpck.jpg'); /* Set background image */
+      background-size: cover; /* Cover the entire page */
+      background-position: center;
+      background-repeat: repeat; /* Ensure the image repeats */
+      animation: moveBackground 30s linear infinite; /* Apply animation */
+    }
+
+    @keyframes moveBackground {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 100% 100%;
+      }
     }
 
     .btn {
       --color: #00A97F;
       --color2: rgb(10, 25, 30);
-      width: 200px; /* Set a fixed width for the buttons */
+      width: 200px;
       padding: 0.8em 1.75em;
       background-color: transparent;
       border-radius: 6px;
@@ -32,7 +45,7 @@
       font-family: 'Roboto', 'Segoe UI', sans-serif;
       text-transform: uppercase;
       color: var(--color);
-      margin-bottom: 10px; /* Add margin to separate buttons */
+      margin-bottom: 10px;
     }
 
     .btn::after, .btn::before {
